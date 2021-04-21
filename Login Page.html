@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+    <link rel="stylesheet" href="font1.css">
+</head>
+
+<body>
+    <center>
+        <h1 class="login"> LOGIN PAGE</h1>
+        <br />
+        <form onsubmit="login()">
+            <div class="p3">
+             <strong><label>mobile:</label></strong>
+                <input type="text" class="p3" placeholder="mobile no" id="mob" required autofocus>
+                <br />
+                <label>password</label>
+                <input type="password" class="p3" placeholder="password" id="pass"required>
+                <br />
+                <button>submit</button>
+                <button type="reset">reset</button>
+                <script>
+                    function login(){
+                        event.preventDefault();
+                    
+                        let mobile=document.querySelector("#mob").value;
+                        let password=document.querySelector("#pass").value;
+                        let mob="9597181908";
+                        let pass="abcd";
+                         if(mobile == mob && password == pass){
+                         alert("success");
+                          window.location.href="task2.html"
+                         }
+                         else
+                         {
+                         alert("invalid");
+                         }
+                    }
+                   
+                
+                </script>
+            </div>
+        </form>
+    </center>
+</body>
+
+</html>

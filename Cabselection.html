@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CAB TYPES</title>
+<style>
+    body {
+      background-image: url('C:\Users\visw2644\Downloads\cab-bookong-online.jpeg');
+    }
+    </style>
+</head>
+<body bgcolor="pale blue">
+<center>
+<h1 style="font-family:verdana"> CAB TYPE</h1>
+<table border="30" style="background-color :azure">
+  <form>
+<thead>
+  <tr><th>type</th> <th>price per km </th></tr>
+</thead>
+<tbody>
+  <tr><td>micro</td><td>10 per km</td>
+  <tr><td>macro</td><td>15 per km</td>
+  <tr><td>prime</td><td>20 perkm</td>
+</tbody>
+</table>
+<br />
+<br />
+<h2 style="font-family:verdana"> Select one </h2>
+<select id="m"> 
+<option  selected disabled="--select cab type --">select cab type </option>
+<br />
+<option value="microcab" id="m">micro</option>
+<option value="macrocab" id="m">macro</option>
+<option value="primecab" id="m" >prime</option>
+</select>
+<br />
+<br />
+<br />
+<button onclick="cabtype()">next</button>
+</form>
+<script>
+    function cabtype(){
+      event.preventDefault();
+      let cabtypee=document.querySelector("#m").value;
+      window.location.href="micro.html?"+cabtypee;
+    }
+    </script>
+</center>
+</body>
+</body>
+</html>

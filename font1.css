@@ -1,0 +1,32 @@
+ .p3 {
+            font-family: "Lucida Console", "Courier New", monospace;
+            color: yellow;
+            background-color: rgb(255, 252, 247);
+            opacity: 75%;;
+            border: 3px solid rgb(0, 0, 0);
+            margin-left: 300px;
+            margin-right: 300px;
+
+          }
+/* .background {
+    background-image: ;
+} */
+a:hover{
+    background-color : yellow;
+    padding: 7px;
+    
+}
+body{
+    background-image: url(https://media.giphy.com/media/3o6ZsTgUfYjJrbmj1m/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: yellow;
+    font-size: 80px;
+}
+label{
+    font-
+    fo
+}

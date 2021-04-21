@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="ISO-8859-1">
+        <title>Insert title here</title>
+        <link rel="stylesheet" href="font.css">
+</head>
+
+<body>
+    <form onsubmit="calculate()">
+
+        <center>
+      <strong> <h1>Book your  desired cab.. </h1></strong>
+        <h3>Kindly Enter the details..</h3>
+        <b1 />
+        <label>Enter km</label>
+        <input type="number" class="p3" placeholder="km" id="km" required autofocus/>
+        <br /><br />
+        <label class="p3"> Journey date   </label>
+        <input type="date" min="2021-04-19" class="p3" max="2021-04-24" id="journeydate" />
+        </div>
+        <br /><br />
+        <label class="p3">Time</label>
+        <input type="time" id="journeytime">
+        <br /><br />
+        <label class="p3">Gender</label>
+        <input type="radio" name="gender" class="p3" value="m" id="male" >male
+        <input type="radio" name="gender"class="p3" value="f" id="female" >female
+        <br /><br />
+        <label>Are you senior citizen?</label>
+        <input type="radio" value="click" id="senior">seniorcitizen
+        <br />
+        <br />
+        <button type="submit" onclick="calculate()">Check bill Amount</button>
+        <button type="reset">Reset</button>
+     
+        <button onclick="back()">Back to Cab Types</button>
+        <br /><br /><br /><br />
+        <button onclick="next()">Book The Ride</button>
+        </center>
+        </form>
+        <div id="bill">
+
+        </div>
+        <div id="bill1">
+
+        </div>
+        <div id="bill2">
+
+        </div>
+        <div id="bill3">
+
+        </div>
+        <div id="bill4">
+
+        </div>
+    <script>
+        function calculate() {
+            event.preventDefault();
+            let kilom = document.querySelector("#km").value;
+            var hr=document.querySelector("#journeytime").value;
+            if(document.getElementById('senior').checked) {   
+               var selectedValue = document.getElementById('senior').value;  
+            }     
+          
+            let cabtypee=window.location.search.substr(1);
+            switch(cabtypee){
+                case "microcab":
+                    bill=kilom*10;
+                    break;
+                case "macrocab":
+                    bill=kilom*15;
+                    break;
+                case "primecab":
+                    bill=kilom*20;
+                    break;
+               // default:
+                //    break;
+            }
+        
+            var hrr=hr.substr(0,2);
+            let gst=(bill*0.07)+bill;
+            let hrint=parseInt(hrr);
+            window.localStorage.setItem("hrint",hrint);
+
+
+            document.querySelector("#bill").innerHTML="your bill amount with gst :"+gst; 
+            if(selectedValue=="click"){
+             if(hrint>=16 && hrint<=18){
+                var peakbill=((gst*0.0125)+gst);
+                var seniorbill=peakbill/2;
+                document.querySelector("#bill1").innerHTML="Peak hours extra charges + senior citizen discount :"+seniorbill;
+             }
+             else{
+                 let gst2=(gst/2);
+                   document.querySelector("#bill2").innerHTML="50% discount for senior citizen ,your amount is ...:"+gst2;
+             }
+            }
+            else{
+                 if(hrint>=16 && hrint<=18){
+                  var peakbill=((gst*0.0125)+gst);
+                     document.querySelector("#bill3").innerHTML="Peak Hours extra charges ,your bill is ..:"+peakbill;
+                 }
+                else{
+                        document.querySelector("#bill4").innerHTML="Your total bill amount is..:"+gst;
+                }
+            }
+            
+        }
+             
+
+        function back(){
+            event.preventDefault();
+             window.location.href="task2.html"
+
+        }
+        function next(){
+             event.preventDefault();
+              alert(" Happy ride...Booking successfull !!");
+        }
+    </script>
+</body>
+
+</html>
