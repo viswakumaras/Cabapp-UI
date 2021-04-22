@@ -8,28 +8,28 @@
 </head>
 
 <body>
-    <form onsubmit="calculate()">
+  <strong> <form onsubmit="calculate()" class="fontt">
 
         <center>
-      <strong> <h1>Book your  desired cab.. </h1></strong>
-        <h3>Kindly Enter the details..</h3>
+      <strong> <h1 style="color:yellow;">Book your  desired cab.. </h1></strong>
+        <h3 style="color:whitesmoke;">Kindly Enter the details..</h3>
         <b1 />
-        <label>Enter km</label>
+        <label style="color:white;">Enter km</label>
         <input type="number" class="p3" placeholder="km" id="km" required autofocus/>
         <br /><br />
-        <label class="p3"> Journey date   </label>
+        <label class="p3" style="color:white;"> Journey date   </label>
         <input type="date" min="2021-04-19" class="p3" max="2021-04-24" id="journeydate" />
         </div>
         <br /><br />
-        <label class="p3">Time</label>
+        <label class="p3" style="color:white;">Time</label>
         <input type="time" id="journeytime">
         <br /><br />
-        <label class="p3">Gender</label>
+        <label class="p3" style="color:white;">Gender</label>
         <input type="radio" name="gender" class="p3" value="m" id="male" >male
         <input type="radio" name="gender"class="p3" value="f" id="female" >female
         <br /><br />
-        <label>Are you senior citizen?</label>
-        <input type="radio" value="click" id="senior">seniorcitizen
+        <label style="color:white;">Are you senior citizen?</label>
+        <input type="radio" value="click" id="senior">
         <br />
         <br />
         <button type="submit" onclick="calculate()">Check bill Amount</button>
@@ -55,6 +55,7 @@
         <div id="bill4">
 
         </div>
+        </strong>
     <script>
         function calculate() {
             event.preventDefault();
